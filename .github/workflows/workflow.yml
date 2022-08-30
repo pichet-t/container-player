@@ -1,0 +1,15 @@
+name: Docker Player
+
+on:
+  pull_request:
+    types: [labeled]
+    
+jobs:
+  action:
+     runs-on: ubuntu-latest
+     
+     steps:
+        - uses: actions/checkout@v2
+        
+        - name: hello-terraform
+          uses: ./.github/actions/hello-tf
