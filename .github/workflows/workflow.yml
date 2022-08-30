@@ -12,7 +12,7 @@ jobs:
         env:
           WORKDIR: /workdir
         volumes:
-          - /workdir:.
+          - /workdir:./
      steps:
         - uses: actions/checkout@v2
         
