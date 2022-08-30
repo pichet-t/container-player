@@ -1,0 +1,7 @@
+name: "terraform init"
+
+description: "try to tf init in container"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
