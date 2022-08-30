@@ -12,7 +12,7 @@ jobs:
         env:
           WORKDIR: /workdir
         volumes:
-          - ./.github/actions/hello-tf:/workdir
+          - /workdir:./.github/actions/hello-tf
      steps:
         - uses: actions/checkout@v2
         
