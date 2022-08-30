@@ -1,5 +1,4 @@
 FROM hashicorp/terraform
 
-WORKDIR /hello-tf
-ADD . /hello-tf
-ENTRYPOINT terraform init
+COPY providers.tf .
+RUN terraform init
