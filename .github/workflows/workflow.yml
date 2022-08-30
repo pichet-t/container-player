@@ -5,11 +5,19 @@ on:
     types: [labeled]
     
 jobs:
-  action:
+  action-player:
      runs-on: ubuntu-latest
-     
+     container: 
+        image: hashicorp/terraform
+        env:
+          WORKDIR: /workdir
+        volumes:
+          - /workdir:.
      steps:
         - uses: actions/checkout@v2
         
         - name: hello-terraform
           uses: ./.github/actions/hello-tf
+          
+        - name: init
+          run: init
