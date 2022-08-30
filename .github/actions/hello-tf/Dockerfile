@@ -2,4 +2,4 @@ FROM hashicorp/terraform
 
 WORKDIR /hello-tf
 COPY . /hello-tf
-ENTRYPOINT  init
+ENTRYPOINT terraform init
