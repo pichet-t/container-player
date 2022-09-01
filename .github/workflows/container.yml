@@ -1,0 +1,22 @@
+name: 'container run'
+
+on:
+  pull_request:
+    types: [labeled]
+
+defaults:
+  run:
+    working-directory: ./.github/actions/hello-tf
+
+jobs:
+  container-job:
+    runs-on: ubuntu-latest
+
+    container:
+      image: hashicorp/terraform
+      
+      volumes:
+        - $PWD:/infra
+        
+    steps:
+      - run: version
