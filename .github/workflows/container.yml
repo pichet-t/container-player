@@ -17,6 +17,5 @@ jobs:
       volumes:
         - $PWD:/infra
         
-steps:
-  - uses: actions/checkout@v2
-  - run: version
+    steps:
+      - run: version
