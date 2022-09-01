@@ -1,4 +1,4 @@
-name: container run
+name: 'container run'
 
 on:
   workflow_dispatch:
